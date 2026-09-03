@@ -80,6 +80,8 @@ const manuscriptsInPreparation = [
   'Unified probabilistic modeling of heterogeneous stochastic responses: Random variables, random processes, and random fields',
   'Cost-aware sequential allocation between data acquisition and model refinement in multi-fidelity Gaussian process surrogates',
   'A shared-latent physics multi-fidelity surrogate for layered plasma etch',
+  'Sequential multi-fidelity Gaussian processes for fidelity-wise variance decomposition',
+  'Bayesian nonparametric model calibration with aleatory-epistemic uncertainty separation and sequential experimental design',
 ];
 
 const publications = [
