@@ -303,11 +303,11 @@ const projectGroups = [
 ];
 
 const conferences = [
-  ['2026', 'Go, E., Kang, M., Byun, S., Kim, J., Jung, Y., Kim, S., Kang, W. S., & Kim, H.-U.', 'RGB-Based Machine Learning for Multilayer-aware Thickness Prediction and End-Point Detection in Plasma Etching.', 'VASSCAA-13 & KVS 2026 · Abstract 0044 · Regular Session, Thin Film · Presenter: Eunseo Go'],
+  ['2026', 'Go, E., Kang, M., Byun, S., Kim, J., Jung, Y., Kim, S., Kang, W. S., & Kim, H.-U.', 'RGB-Based Machine Learning for Multilayer-aware Thickness Prediction and End-Point Detection in Plasma Etching.', 'VASSCAA-13 & KVS 2026'],
   ['2026', 'Lee, C. J., Jung, Y., & Lee, I.', 'Nonparametric model calibration for disentangling aleatory and epistemic uncertainties.', 'ACSMO 2026'],
   ['2026', 'Jeong, J., Lee, M., Jung, Y., Lee, U., & Lee, I.', 'Sequential sampling strategy for non-hierarchical multi-fidelity modeling considering data synergies.', 'ACSMO 2026'],
-  ['2026', 'Lim, E., Kim, J., & Jung, Y.', 'Joint inverse calibration of wake surrogates and temporal wind-field corrections for wind-farm reliability assessment.', 'KSME CAE and Applied Mechanics Division Spring Conference'],
-  ['2026', 'Kim, S., Kim, J., & Jung, Y.', 'A framework for pack-level battery voltage prediction and model calibration using accelerated life testing data.', 'KSME CAE and Applied Mechanics Division Spring Conference'],
+  ['2026', 'Lim, E., Kim, J., & Jung, Y.', 'Joint inverse calibration of wake surrogates and temporal wind-field corrections for wind-farm reliability assessment.', '대한기계학회 CAE 및 응용역학부문 춘계학술대회'],
+  ['2026', 'Kim, S., Kim, J., & Jung, Y.', 'A framework for pack-level battery voltage prediction and model calibration using accelerated life testing data.', '대한기계학회 CAE 및 응용역학부문 춘계학술대회'],
   ['2026', 'Hwang, Y., Go, E., Yeon, D., Jung, Y., Kim, S., Kim, H.-U., & Kim, J.', 'Random forest and physics-based end point detection for reliable plasma etching under imbalanced experimental data.', 'KSME Reliability Division 20th Anniversary Conference'],
   ['2026', 'Kang, M., Go, E., Kim, S., Lee, J., Kang, W., Choi, M., Jung, Y., Kim, J., & Kim, H.-U.', 'DIC and machine learning-based etch depth prediction and uncertainty quantification in plasma etching.', '70th Winter Annual Conference of the Korean Vacuum Society'],
   ['2023', 'Gu, J., Jung, Y., Ahn, J., Jeong, Y., Jung, J., Ryu, S., Lee, I., & Park, I.', 'Versatile soft strain sensor design optimization based on auxetic structure.', 'IEEE NEMS 2023'],
@@ -325,11 +325,11 @@ const conferences = [
 ];
 
 const patents = [
-  ['KR 10-2020-0028453', 'High-temperature heat exchanger for thermoelectric generation with fins and partition walls.', 'Park, S., Ryu, B., Jung, J., Lee, I., & Jung, Y.'],
-  ['KR 10-2024-0019164 · KR20250122922A', 'Mask manufacturing method including ACI target allocation method, and semiconductor chip manufacturing method using the same.', 'Jung, Y., Shin, M., Park, K., & Heo, Y. · Samsung Electronics'],
+  ['KR 10-2020-0028453', '핀과 격벽이 형성된 열전발전용 고온부 열교환기.', 'Park, S., Ryu, B., Jung, J., Lee, I., & Jung, Y.'],
+  ['KR 10-2024-0019164 · KR20250122922A', 'ACI(After Clean Inspection) 타겟 할당 방법을 포함하는 마스크 제조 방법, 및 이를 이용한 반도체 칩의 제조 방법.', 'Jung, Y., Shin, M., Park, K., & Heo, Y. · Samsung Electronics'],
   ['US 18/952,272 · US20250251660A1', 'Mask manufacturing method including ACI target allocation method, and semiconductor chip manufacturing method using the same.', 'Jung, Y., Shin, M., Park, K., & Heo, Y. · Samsung Electronics'],
-  ['KR 10-2024-0072641 · KR20250173329A', 'Method and system for mask control using fake mask and method for manufacturing mask using the same.', 'Shin, M., Jung, Y., & Park, K. · Samsung Electronics'],
-  ['KR 10-2024-0129777 · KR20260043858A', 'SRAF control method and system for wafer exposure, and mask manufacturing method using the method.', 'Jung, Y., Shin, M., & Park, K. · Samsung Electronics'],
+  ['KR 10-2024-0072641 · KR20250173329A', '페이크 마스크를 사용하는 마스크 제어 방법, 그 시스템, 및 이를 이용한 마스크 제조 방법.', 'Shin, M., Jung, Y., & Park, K. · Samsung Electronics'],
+  ['KR 10-2024-0129777 · KR20260043858A', '페이크 폴리곤을 사용하는 SRAF 제어 방법, 그 시스템, 및 이를 이용한 마스크 제조 방법.', 'Jung, Y., Shin, M., & Park, K. · Samsung Electronics'],
   ['US 19/032,417 · US20260086450A1', 'SRAF control method and system for wafer exposure, and mask manufacturing method using the method.', 'Jung, Y., Shin, M., & Park, K. · Samsung Electronics'],
 ];
 
