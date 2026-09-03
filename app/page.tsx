@@ -21,14 +21,6 @@ const recentResearchAreas = [
 const manuscriptsUnderReview = [
   {
     year: '2026',
-    authors: 'Lim, E., & Jung, Y.*',
-    title: 'Neural Wake Surrogate for SCADA-Conditioned Posterior Predictive Wind Farm Power Reliability',
-    venue: 'Renewable Energy.',
-    metric: 'Submitted',
-    note: '*Corresponding author',
-  },
-  {
-    year: '2026',
     authors: 'Go, E., Yeon, D., Hwang, Y., Kang, M., Byun, S., Choi, S., Kim, B., Song, S., Choi, M. S., Jung, Y., Kim, S., Kim, J., & Kim, H.-U.',
     title: 'Physically Validated, Image-Based Machine Learning for End-Point Detection and Layer-Resolved Thickness Prediction in Multilayer Plasma Etching',
     venue: 'ACS Applied Materials & Interfaces.',
@@ -77,6 +69,7 @@ const manuscriptsUnderReview = [
 ];
 
 const manuscriptsInPreparation = [
+  'Neural Wake Surrogate for SCADA-Conditioned Posterior Predictive Wind Farm Power Reliability',
   'Unified probabilistic modeling of heterogeneous stochastic responses: Random variables, random processes, and random fields',
   'Cost-aware sequential allocation between data acquisition and model refinement in multi-fidelity Gaussian process surrogates',
   'A shared-latent physics multi-fidelity surrogate for layered plasma etch',
@@ -447,7 +440,6 @@ export default function Home() {
             <div className="hero-links">
               <a href="mailto:ys.jung@hongik.ac.kr">ys.jung@hongik.ac.kr</a>
               <a href="https://scholar.google.co.kr/citations?user=_ISI9JcAAAAJ&hl=ko">Google Scholar</a>
-              <a href="/Yongsu_Jung_CV.pdf">CV · PDF</a>
             </div>
           </div>
           <div className="fact-row" aria-label="Profile summary">
