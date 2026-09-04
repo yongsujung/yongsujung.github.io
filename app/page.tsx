@@ -18,6 +18,13 @@ const recentResearchAreas = [
   'Robotics',
 ];
 
+const undergraduateResearchers = [
+  { name: '김성제', year: '4th year' },
+  { name: '임은서', year: '4th year' },
+  { name: '김충연', year: '4th year' },
+  { name: '이상협', year: '3rd year' },
+];
+
 const manuscriptsUnderReview = [
   {
     year: '2026',
@@ -626,8 +633,17 @@ export default function Home() {
               <div><p>People</p><h2>Researchers</h2></div>
             </div>
 
-            <div className="researcher-panel">
-              <p>Researcher profiles will be added here.</p>
+            <div className="researcher-grid">
+              {undergraduateResearchers.map((researcher) => (
+                <article className="researcher-card" key={researcher.name}>
+                  <div className="researcher-photo" aria-hidden="true" />
+                  <div className="researcher-card-body">
+                    <h3>{researcher.name}</h3>
+                    <p>Undergraduate Researcher</p>
+                    <span>{researcher.year}</span>
+                  </div>
+                </article>
+              ))}
             </div>
           </div>
         </section>
