@@ -360,7 +360,10 @@ h1 {
 .research-figure a,
 .research-figure img { display: block; }
 
-.research-figure a { cursor: zoom-in; }
+.research-figure a {
+  position: relative;
+  cursor: zoom-in;
+}
 
 .research-figure img {
   width: 100%;
@@ -369,6 +372,31 @@ h1 {
 }
 
 .research-framework-figure img { max-width: 1060px; }
+
+.figure-modification-note {
+  position: absolute;
+  z-index: 1;
+  padding: 5px 10px;
+  border: 2px solid currentColor;
+  background: rgba(255, 255, 255, 0.94);
+  color: #c62828;
+  font-size: clamp(12px, 1.35vw, 18px);
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  line-height: 1.2;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.figure-modification-note-modeling {
+  top: 1.8%;
+  right: 1.8%;
+}
+
+.figure-modification-note-decision {
+  top: 54.5%;
+  left: 1.8%;
+}
 
 .uncertainty-figure {
   margin-top: 18px;
