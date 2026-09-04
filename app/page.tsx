@@ -526,6 +526,18 @@ export default function Home() {
                 loading="lazy"
                 decoding="async"
               />
+              <span
+                className="figure-modification-note figure-modification-note-modeling"
+                aria-hidden="true"
+              >
+                Needs Modification
+              </span>
+              <span
+                className="figure-modification-note figure-modification-note-decision"
+                aria-hidden="true"
+              >
+                Needs Modification
+              </span>
             </a>
             <figcaption>
               <p>Connecting uncertainty quantification, modeling, optimization, and sequential decision-making through data.</p>
