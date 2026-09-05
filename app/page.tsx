@@ -15,7 +15,6 @@ const researchInterests = [
 const recentResearchAreas = [
   'Large Language Models (LLMs)',
   'Photolithography',
-  'Robotics',
 ];
 
 const undergraduateResearchers = [
@@ -575,7 +574,7 @@ export default function Home() {
             <h3 className="subsection-title">Recent research interests</h3>
             <p className="recent-interest-intro">
               Extending data-driven modeling, uncertainty quantification, and
-              design optimization to three emerging research domains.
+              design optimization to two emerging research domains.
             </p>
             <div className="recent-interest-grid">
               {recentResearchAreas.map((area, index) => (
