@@ -27,18 +27,26 @@ const undergraduateResearchers = [
 const manuscriptsUnderReview = [
   {
     year: '2026',
-    authors: 'Go, E., Yeon, D., Hwang, Y., Kang, M., Byun, S., Choi, S., Kim, B., Song, S., Choi, M. S., Jung, Y., Kim, S., Kim, J., & Kim, H.-U.',
-    title: 'Physically Validated, Image-Based Machine Learning for End-Point Detection and Layer-Resolved Thickness Prediction in Multilayer Plasma Etching',
-    venue: 'ACS Applied Materials & Interfaces.',
-    metric: 'Under Review',
-  },
-  {
-    year: '2026',
     authors: 'Jung, Y.*, Choi, H., Lee, M., Lee, U., & Lee, I.*',
     title: 'Source-wise Decomposition of Predictive Uncertainty in Heteroscedastic Gaussian Processes',
     venue: 'Reliability Engineering & System Safety.',
     metric: 'Revision in Progress',
     note: '*Corresponding authors',
+  },
+  {
+    year: '2026',
+    authors: 'Park, H.-J.†, Kim, J.†, Cho, I., & Jung, Y.*',
+    title: 'Data-driven reliability-based design optimization using latent distribution embedding and conditional normalizing flows',
+    venue: 'Reliability Engineering & System Safety.',
+    metric: 'Revision in Progress',
+    note: '†These authors contributed equally · *Corresponding author',
+  },
+  {
+    year: '2026',
+    authors: 'Go, E., Yeon, D., Hwang, Y., Kang, M., Byun, S., Choi, S., Kim, B., Song, S., Choi, M. S., Jung, Y., Kim, S., Kim, J., & Kim, H.-U.',
+    title: 'Physically Validated, Image-Based Machine Learning for End-Point Detection and Layer-Resolved Thickness Prediction in Multilayer Plasma Etching',
+    venue: 'ACS Applied Materials & Interfaces.',
+    metric: 'Under Review',
   },
   {
     year: '2026',
@@ -63,14 +71,6 @@ const manuscriptsUnderReview = [
     venue: 'Journal of Energy Storage.',
     metric: 'Under Review',
     note: '*Corresponding authors',
-  },
-  {
-    year: '2026',
-    authors: 'Park, H.-J.†, Kim, J.†, Cho, I., & Jung, Y.*',
-    title: 'Data-driven reliability-based design optimization using latent distribution embedding and conditional normalizing flows',
-    venue: 'Reliability Engineering & System Safety.',
-    metric: 'Under Review',
-    note: '†These authors contributed equally · *Corresponding author',
   },
 ];
 
