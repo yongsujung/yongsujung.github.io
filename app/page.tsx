@@ -9,7 +9,7 @@ const researchInterests = [
   'Aleatory and epistemic uncertainty quantification (UQ)',
   'Statistical model calibration',
   'Multi-fidelity / multi-output machine learning',
-  'Resource allocation',
+  'Resource allocation and decision-making',
 ];
 
 const recentResearchAreas = [
