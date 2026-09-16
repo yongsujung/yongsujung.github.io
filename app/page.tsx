@@ -22,6 +22,8 @@ const undergraduateResearchers = [
   { name: '임은서', year: '4th year' },
   { name: '김충연', year: '4th year' },
   { name: '이상협', year: '3rd year' },
+  { name: '엄승훈', year: '3rd year' },
+  { name: '이재창', year: '3rd year' },
 ];
 
 const manuscriptsUnderReview = [
@@ -632,17 +634,16 @@ export default function Home() {
               <div><p>People</p><h2>Researchers</h2></div>
             </div>
 
-            <div className="researcher-grid">
-              {undergraduateResearchers.map((researcher) => (
-                <article className="researcher-card" key={researcher.name}>
-                  <div className="researcher-photo" aria-hidden="true" />
-                  <div className="researcher-card-body">
-                    <h3>{researcher.name}</h3>
-                    <p>Undergraduate Researcher</p>
+            <div className="researcher-list-block">
+              <h3>Undergraduate Researchers</h3>
+              <ul className="researcher-list">
+                {undergraduateResearchers.map((researcher) => (
+                  <li key={researcher.name}>
+                    <strong>{researcher.name}</strong>
                     <span>{researcher.year}</span>
-                  </div>
-                </article>
-              ))}
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </section>
