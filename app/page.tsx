@@ -88,6 +88,13 @@ const manuscriptsInPreparation = [
 const publications = [
   {
     year: '2026',
+    authors: 'Jung, Y., Kang, M., Kim, M., Lim, G., Choi, M. S., Kim, H.-U., & Kim, J.',
+    title: 'Uncertainty quantification and parameter optimization of a plasma etching process using a heteroscedastic Gaussian process.',
+    venue: 'Engineering Optimization, 1–26.',
+    metric: 'IF 2.8 · JCR Top 33.7% · Q2',
+  },
+  {
+    year: '2026',
     authors: 'Jung, Y.*, Park, Y.*, & Lee, I.',
     title: 'Non-hierarchical multi-output multi-fidelity Gaussian processes using a structure-aware composite kernel.',
     venue: 'Knowledge-Based Systems, 351, 116634.',
@@ -129,12 +136,6 @@ const publications = [
     title: 'Advanced non-hierarchical co-Kriging using latent map multi-output Gaussian process.',
     venue: 'Applied Mathematical Modelling, 151, 116573.',
     metric: 'IF 5.5 · JCR Top 5.1% · Q1',
-  },
-  {
-    year: '2026',
-    authors: 'Jung, Y., Kang, M., Kim, M., Choi, M. S., Kim, H.-U., & Kim, J.',
-    title: 'Uncertainty quantification and parameter optimization of plasma etching process using heteroscedastic Gaussian process.',
-    venue: 'Engineering Optimization (Accepted).',
   },
   {
     year: '2024',
