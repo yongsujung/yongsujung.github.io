@@ -514,16 +514,16 @@ export default function Home() {
           <figure className="research-figure research-framework-figure">
             <h3 className="research-figure-title">Data-driven research framework</h3>
             <a
-              href="/research-framework.png"
+              href="/research-framework.png?v=20260929"
               target="_blank"
               rel="noreferrer"
               aria-label="Open the research framework diagram at full size"
               title="Open full-size research framework"
             >
               <img
-                src="/research-framework.png"
+                src="/research-framework.png?v=20260929"
                 alt="Data-driven research framework connecting uncertainty quantification, modeling, optimization, and decision-making with engineering applications"
-                width="1433"
+                width="1430"
                 height="639"
                 loading="lazy"
                 decoding="async"
