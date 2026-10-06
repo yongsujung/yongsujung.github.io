@@ -45,6 +45,14 @@ const manuscriptsUnderReview = [
   },
   {
     year: '2026',
+    authors: 'Kim, S., Hahn, B.*, & Jung, Y.*',
+    title: 'Model Calibration for Lithium-Ion Battery Voltage Prediction Using a Single Particle Model with Electrolyte',
+    venue: 'Journal of Energy Storage.',
+    metric: 'Revision in Progress',
+    note: '*Corresponding authors',
+  },
+  {
+    year: '2026',
     authors: 'Go, E., Yeon, D., Hwang, Y., Kang, M., Byun, S., Choi, S., Kim, B., Song, S., Choi, M. S., Jung, Y., Kim, S., Kim, J., & Kim, H.-U.',
     title: 'Physically Validated, Image-Based Machine Learning for End-Point Detection and Layer-Resolved Thickness Prediction in Multilayer Plasma Etching',
     venue: 'ACS Applied Materials & Interfaces.',
@@ -65,14 +73,6 @@ const manuscriptsUnderReview = [
     venue: 'Engineering Applications of Artificial Intelligence.',
     metric: 'Under Review',
     note: '†These authors contributed equally · *Corresponding authors',
-  },
-  {
-    year: '2026',
-    authors: 'Kim, S., Hahn, B.*, & Jung, Y.*',
-    title: 'Model Calibration for Lithium-Ion Battery Voltage Prediction Using a Single Particle Model with Electrolyte',
-    venue: 'Journal of Energy Storage.',
-    metric: 'Under Review',
-    note: '*Corresponding authors',
   },
 ];
 
