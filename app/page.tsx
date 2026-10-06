@@ -56,7 +56,7 @@ const manuscriptsUnderReview = [
     authors: 'Go, E., Yeon, D., Hwang, Y., Kang, M., Byun, S., Choi, S., Kim, B., Song, S., Choi, M. S., Jung, Y., Kim, S., Kim, J., & Kim, H.-U.',
     title: 'Physically Validated, Image-Based Machine Learning for End-Point Detection and Layer-Resolved Thickness Prediction in Multilayer Plasma Etching',
     venue: 'ACS Applied Materials & Interfaces.',
-    metric: 'Under Review',
+    metric: 'Revision in Progress',
   },
   {
     year: '2026',
