@@ -701,7 +701,7 @@ h1 {
   display: grid;
   grid-template-columns: 48px minmax(0, 1fr);
   column-gap: 22px;
-  padding: 20px 0;
+  padding: 14px 0;
   border-top: 1px solid var(--line);
 }
 
@@ -709,7 +709,7 @@ h1 {
   display: block;
   padding-top: 3px;
   color: #839097;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 750;
   font-variant-numeric: tabular-nums;
   letter-spacing: 0.04em;
@@ -727,11 +727,12 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   gap: 4px 18px;
-  margin-bottom: 5px;
+  margin-bottom: 3px;
   color: var(--accent);
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 750;
   letter-spacing: 0.03em;
+  line-height: 1.4;
   text-transform: uppercase;
 }
 
@@ -740,13 +741,18 @@ h1 {
 
 .publication-list .authors,
 .publication-list .venue,
-.publication-list .note { line-height: 1.5; }
+.publication-list .note {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.publication-list .note { margin-top: 3px; font-size: 13px; }
 
 .publication-list h3 {
   max-width: 1040px;
-  margin: 4px 0 5px;
-  font-size: clamp(19px, 2vw, 23px);
-  line-height: 1.35;
+  margin: 3px 0;
+  font-size: clamp(17px, 1.7vw, 20px);
+  line-height: 1.3;
 }
 
 .note { margin-top: 5px; font-style: italic; }
@@ -787,16 +793,16 @@ h1 {
 }
 
 .manuscript-list li {
-  padding: 16px 0;
+  padding: 12px 0;
   border-top: 1px solid var(--line);
 }
 
 .manuscript-list h4 {
   margin: 0;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 620;
   letter-spacing: -0.018em;
-  line-height: 1.48;
+  line-height: 1.4;
 }
 
 .manuscript-list p {
