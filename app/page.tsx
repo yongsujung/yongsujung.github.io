@@ -29,6 +29,14 @@ const undergraduateResearchers = [
 const manuscriptsUnderReview = [
   {
     year: '2026',
+    authors: 'Jung, Y.†, Cho, D.†, Go, E., Byun, S., Kim, S., Kim, S., Kim, H.-U.*, & Kim, J.*',
+    title: 'Shared-Latent Physics Multi-Fidelity Surrogate Modeling for Multilayer Plasma Etching',
+    venue: 'Journal of Intelligent Manufacturing.',
+    metric: 'Submitted',
+    note: '†These authors contributed equally · *Corresponding authors',
+  },
+  {
+    year: '2026',
     authors: 'Jung, Y.*, Choi, H., Lee, M., Lee, U., & Lee, I.*',
     title: 'Source-wise Decomposition of Predictive Uncertainty in Heteroscedastic Gaussian Processes',
     venue: 'Reliability Engineering & System Safety.',
@@ -80,7 +88,6 @@ const manuscriptsInPreparation = [
   'Neural wake surrogate for SCADA-conditioned posterior predictive wind farm power reliability',
   'Unified probabilistic modeling of heterogeneous stochastic responses: random variables, random processes, and random fields',
   'Cost-aware sequential allocation between data acquisition and model refinement in multi-fidelity Gaussian process surrogates',
-  'A shared-latent physics multi-fidelity surrogate for layered plasma etch',
   'Sequential multi-fidelity Gaussian processes for fidelity-wise variance decomposition',
   'Bayesian nonparametric model calibration with aleatory-epistemic uncertainty separation and sequential experimental design',
 ];
