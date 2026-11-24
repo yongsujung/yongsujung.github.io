@@ -1,54 +1,102 @@
+import ResearchTabs, { type ResearchStage } from './research-tabs';
+
 const researchPrinciples = [
   ['Data-driven', 'Inductive'],
   ['Domain-independent', 'Scalable'],
   ['Uncertainty-aware', 'Probabilistic'],
 ];
 
-const researchInterests = [
-  'Reliability-based design optimization (RBDO)',
-  'Aleatory and epistemic uncertainty quantification (UQ)',
-  'Statistical model calibration',
-  'Multi-fidelity / multi-output machine learning',
-  'Resource allocation and decision-making',
+const researchStages: ResearchStage[] = [
+  {
+    id: 'input',
+    label: 'Input',
+    subtitle: 'Input uncertainty',
+    title: 'Input uncertainty from limited data',
+    question: 'What is the input distribution, and how sure are we of it?',
+    methods: [
+      ['Hierarchical Bayesian estimation', 'Input distributions from a few tests'],
+      ['Kernel density estimation', 'No assumed distribution family'],
+      ['Deep Gaussian processes', 'Non-stationary random processes'],
+      ['Normalizing flows · diffusion models', 'Complex, high-dimensional distributions'],
+    ],
+    keyWork: 'SMO 2019, 2020 · PEM 2024 · RESS 2026',
+  },
+  {
+    id: 'modeling',
+    label: 'Modeling',
+    subtitle: 'Probabilistic ML',
+    title: 'Probabilistic machine learning',
+    question: 'How uncertain is the prediction, and why?',
+    methods: [
+      ['Multi-fidelity GP', 'Expensive analyses from cheap ones'],
+      ['Multi-output · latent-variable GP', 'Correlated outputs and similar materials in one model'],
+      ['Heteroscedastic GP', 'Variation that changes with the condition'],
+      ['Bayesian model calibration', 'Simulation parameters and model error from tests'],
+    ],
+    keyWork: 'JMD 2021 · RESS 2022 · Eng. Optim. 2026 · KBS 2026',
+  },
+  {
+    id: 'optimization',
+    label: 'Optimization',
+    subtitle: 'Reliable design',
+    title: 'Reliability- and confidence-based design',
+    question: 'Which design stays reliable under uncertainty?',
+    methods: [
+      ['Reliability analysis', 'Probability of failure'],
+      ['RBDO', 'Lowest cost at a target reliability'],
+      ['CBDO', 'Target reliability with a target confidence'],
+      ['System · time-variant reliability', 'Several failure modes; loads over time'],
+    ],
+    keyWork: 'JMD 2021 · RESS 2026 · Structural Safety 2026',
+  },
+  {
+    id: 'decision',
+    label: 'Decision',
+    subtitle: 'Next action',
+    title: 'Sequential decision-making',
+    question: 'Which data or model next, and why?',
+    methods: [
+      ['Bayesian optimization', 'Best condition in a few experiments'],
+      ['Active learning', 'Next sample for accuracy, failure boundary, or optimum'],
+      ['Optimal experimental design', 'Most informative tests for calibration'],
+      ['Cost-aware allocation', 'More data or a better model, per unit cost'],
+    ],
+    keyWork: 'RESS 2021 · SMO 2022 · Structural Safety 2024',
+  },
 ];
 
-const recentResearchAreas = [
-  'Large Language Models (LLMs)',
-  'Photolithography',
-];
-
-const undergraduateResearchers = [
-  { name: '김성제', year: '4th year' },
-  { name: '임은서', year: '4th year' },
-  { name: '김충연', year: '4th year' },
-  { name: '이상협', year: '3rd year' },
-  { name: '엄승훈', year: '3rd year' },
-  { name: '이재창', year: '3rd year' },
+const applications = [
+  ['Plasma etching', 'Robust etch recipes'],
+  ['Multilayer film stacks', 'Stack etching from single-film data'],
+  ['Photolithography', 'Pattern-error prediction'],
+  ['Battery electrodes', 'Particle-size distribution design'],
+  ['Heat exchanger', 'Thermoelectric generator design'],
+  ['Wind power', 'Wind-farm power reliability'],
+  ['UAV flight', 'Joint models of repeated flight tests'],
+  ['Maintenance records', 'LLM-based repair prediction'],
+  ['Material calibration', 'Plasticity from tensile tests'],
+  ['Kirigami strain sensor', 'Purpose-specific geometry'],
+  ['Sensor placement', 'Full field from a few sensors'],
+  ['Strain fields', 'Full-field strain from gauges and DIC'],
 ];
 
 const manuscriptsUnderReview = [
   {
     year: '2026',
-    authors: 'Jung, Y.†, Cho, D.†, Go, E., Byun, S., Kim, S., Kim, S., Kim, H.-U.*, & Kim, J.*',
-    title: 'Shared-Latent Physics Multi-Fidelity Surrogate Modeling for Multilayer Plasma Etching',
-    venue: 'Journal of Intelligent Manufacturing.',
-    metric: 'Submitted',
-    note: '†These authors contributed equally · *Corresponding authors',
-  },
-  {
-    year: '2026',
     authors: 'Jung, Y.*, Choi, H., Lee, M., Lee, U., & Lee, I.*',
-    title: 'Source-wise Decomposition of Predictive Uncertainty in Heteroscedastic Gaussian Processes',
+    title: 'Source-Wise Decomposition of Predictive Uncertainty in Heteroscedastic Gaussian Processes',
     venue: 'Reliability Engineering & System Safety.',
     metric: 'Revision in Progress',
+    journalMetric: 'IF 13.7 · JCR Top 1.8% · Q1',
     note: '*Corresponding authors',
   },
   {
     year: '2026',
     authors: 'Park, H.-J.†, Kim, J.†, Cho, I., & Jung, Y.*',
-    title: 'Data-driven reliability-based design optimization using latent distribution embedding and conditional normalizing flows',
+    title: 'Data-Driven Reliability-Based Design Optimization Using Latent Distribution Embedding and Conditional Normalizing Flows',
     venue: 'Reliability Engineering & System Safety.',
     metric: 'Revision in Progress',
+    journalMetric: 'IF 13.7 · JCR Top 1.8% · Q1',
     note: '†These authors contributed equally · *Corresponding author',
   },
   {
@@ -57,6 +105,7 @@ const manuscriptsUnderReview = [
     title: 'Model Calibration for Lithium-Ion Battery Voltage Prediction Using a Single Particle Model with Electrolyte',
     venue: 'Journal of Energy Storage.',
     metric: 'Revision in Progress',
+    journalMetric: 'IF 10.7 · JCR Top 15.2% · Q1',
     note: '*Corresponding authors',
   },
   {
@@ -65,21 +114,31 @@ const manuscriptsUnderReview = [
     title: 'Physically Validated, Image-Based Machine Learning for End-Point Detection and Layer-Resolved Thickness Prediction in Multilayer Plasma Etching',
     venue: 'ACS Applied Materials & Interfaces.',
     metric: 'Revision in Progress',
+    journalMetric: 'IF 7.9 · JCR Top 22.0% · Q1',
   },
   {
     year: '2026',
     authors: 'Cho, H., Moon, H., Yu, J., Kim, H., Jung, Y.*, & Ryu, S.*',
     title: 'Interpretable Sensor Placement Optimization for Source-Wise Uncertainty-Aware Full-Field Reconstruction from Sparse Measurements',
     venue: 'Mechanical Systems and Signal Processing.',
-    metric: 'Under Review',
+    metric: 'Revision in Progress',
+    journalMetric: 'IF 10.2 · JCR Top 3.3% · Q1',
     note: '*Co-corresponding authors',
   },
   {
     year: '2026',
     authors: 'Jung, Y.†, Lee, M.†, Oh, S.*, & Lee, U.*',
-    title: 'Kriging-enhanced neural network framework employing stochastic architecture neural network ensemble',
+    title: 'Kriging-Enhanced Neural Network Framework Employing Stochastic Architecture Neural Network Ensemble',
     venue: 'Engineering Applications of Artificial Intelligence.',
     metric: 'Under Review',
+    note: '†These authors contributed equally · *Corresponding authors',
+  },
+  {
+    year: '2026',
+    authors: 'Jung, Y.†, Cho, D.†, Go, E., Byun, S., Kim, S., Kim, S., Kim, H.-U.*, & Kim, J.*',
+    title: 'Shared-Latent Physics Multi-Fidelity Surrogate Modeling for Multilayer Plasma Etching',
+    venue: 'Journal of Intelligent Manufacturing.',
+    metric: 'Submitted',
     note: '†These authors contributed equally · *Corresponding authors',
   },
 ];
@@ -90,6 +149,9 @@ const manuscriptsInPreparation = [
   'Cost-aware sequential allocation between data acquisition and model refinement in multi-fidelity Gaussian process surrogates',
   'Sequential multi-fidelity Gaussian processes for fidelity-wise variance decomposition',
   'Bayesian nonparametric model calibration with aleatory-epistemic uncertainty separation and sequential experimental design',
+  'Edge placement error reliability analysis using a learned lithography surrogate accounting for model discrepancy and measurement noise',
+  'Source-wise attribution of predictive uncertainty in LLM-structured maintenance records',
+  'Sparse-gauge full-field strain reconstruction with source-wise predictive uncertainty decomposition',
 ];
 
 const publications = [
@@ -334,7 +396,17 @@ const patents = [
   ['US 19/032,417 · US20260086450A1', 'SRAF control method and system for wafer exposure, and mask manufacturing method using the method.', 'Jung, Y., Shin, M., & Park, K. · Samsung Electronics'],
 ];
 
-function PublicationList({ items, descending = false }: { items: typeof publications; descending?: boolean }) {
+type Publication = {
+  year: string;
+  authors: string;
+  title: string;
+  venue: string;
+  metric?: string;
+  journalMetric?: string;
+  note?: string;
+};
+
+function PublicationList({ items, descending = false }: { items: Publication[]; descending?: boolean }) {
   return (
     <ol className="publication-list">
       {items.map((publication, index) => {
@@ -353,6 +425,7 @@ function PublicationList({ items, descending = false }: { items: typeof publicat
               <div className="publication-meta">
                 <span>{publication.year}</span>
                 {publication.metric && <span>{publication.metric}</span>}
+                {publication.journalMetric && <span>{publication.journalMetric}</span>}
               </div>
               <p className="authors">
                 {publication.authors.split(/(Jung, Y\.\*?)/g).map((part, partIndex) =>
@@ -403,7 +476,6 @@ export default function Home() {
             <a href="#background">Background</a>
             <a href="#research">Research</a>
             <a href="#publications">Publications</a>
-            <a href="#researchers">Researchers</a>
           </nav>
           <a className="header-contact" href="mailto:ys.jung@hongik.ac.kr">Email</a>
         </div>
@@ -445,7 +517,7 @@ export default function Home() {
           </div>
           <div className="fact-row" aria-label="Profile summary">
             <div><strong>{journalPublications.length}</strong><span>Journal publications</span></div>
-            <div><strong>{manuscriptsInPreparation.length} / {manuscriptsUnderReview.length}</strong><span>In preparation / Under review</span></div>
+            <div><strong>{manuscriptsUnderReview.length} / {manuscriptsInPreparation.length}</strong><span>Under review / In preparation</span></div>
             <div><strong>{conferences.length} / {patents.length}</strong><span>Conferences / Patents</span></div>
             <div><strong>Sejong</strong><span>Republic of Korea</span></div>
           </div>
@@ -501,85 +573,97 @@ export default function Home() {
             </ul>
           </div>
 
-          <h3 className="graphical-overview-title">Graphical Research Overview</h3>
-
-          <figure className="research-figure research-framework-figure">
-            <h3 className="research-figure-title">Data-driven research framework</h3>
-            <a
-              href="/research-framework.png?v=20261019"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="Open the research framework diagram at full size"
-              title="Open full-size research framework"
-            >
-              <img
-                src="/research-framework.png?v=20261019"
-                alt="Data-driven research framework connecting uncertainty quantification, modeling, optimization, and decision-making with engineering applications"
-                width="1430"
-                height="639"
-                loading="lazy"
-                decoding="async"
-              />
-            </a>
-            <figcaption>
-              <p>Connecting uncertainty quantification, modeling, optimization, and sequential decision-making through data.</p>
-            </figcaption>
-          </figure>
-
-          <figure className="research-figure uncertainty-figure">
-            <h3 className="research-figure-title">Aleatory and epistemic uncertainty</h3>
-            <a
-              href="/aleatory-epistemic-uncertainty.png"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="Open the aleatory and epistemic uncertainty diagram at full size"
-              title="Open full-size uncertainty diagram"
-            >
-              <img
-                src="/aleatory-epistemic-uncertainty.png"
-                alt="Comparison of irreducible aleatory uncertainty and reducible epistemic uncertainty in predictive engineering models"
-                width="1188"
-                height="308"
-                loading="lazy"
-                decoding="async"
-              />
-            </a>
-            <figcaption>
-              <p>Distinguishing inherent variability from reducible lack of knowledge for reliable prediction and decision-making.</p>
-            </figcaption>
-          </figure>
-
-          <div className="research-statement">
-            <h3 className="subsection-title">Ultimate goal</h3>
-            <p>
-              Developing data-driven, end-to-end solutions for uncertainty
-              quantification and design optimization—making advanced methods
-              accessible to engineers across industries.
-            </p>
+          <div className="research-block">
+            <h3 className="subsection-title">Two types of uncertainty</h3>
+            <figure className="research-figure wide-figure">
+              <a
+                href="/aleatory-epistemic-uncertainty.png?v=20261124c"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Open the aleatory and epistemic uncertainty diagram at full size"
+                title="Open full-size uncertainty diagram"
+              >
+                <img
+                  src="/aleatory-epistemic-uncertainty.png?v=20261124c"
+                  alt="Two types of uncertainty side by side: aleatory uncertainty, the inherent and irreducible variability of inputs propagated through a fixed model, and epistemic uncertainty, the reducible lack of knowledge that appears as disagreement among plausible models"
+                  width="2680"
+                  height="724"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </a>
+              <figcaption>
+                <p>Distinguishing inherent variability from reducible lack of knowledge for reliable prediction and decision-making.</p>
+              </figcaption>
+            </figure>
           </div>
 
-          <div className="research-interest-block">
-            <h3 className="subsection-title">Research interests</h3>
-            <ul className="interest-bullet-grid">
-              {researchInterests.map((interest) => <li key={interest}>{interest}</li>)}
+          <div className="research-block" id="research-modules">
+            <h3 className="subsection-title">Research overview</h3>
+            <figure className="research-figure wide-figure">
+              <a
+                href="/research-overview.png?v=20261124d"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Open the research overview figure at full size"
+                title="Open full-size research overview"
+              >
+                <img
+                  src="/research-overview.png?v=20261124d"
+                  alt="Research overview in four modules: input distributions from few tests, data-driven AI modeling with multi-fidelity, multi-output, heteroscedastic, and latent-variable Gaussian processes and pretrained foundation models, reliability- and confidence-based optimization, and sequential experimental design with Bayesian optimization and active learning, with new data fed back to the input"
+                  width="2644"
+                  height="1040"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </a>
+              <figcaption>
+                <p>From limited and heterogeneous data to reliable engineering decisions, with new data fed back after each decision.</p>
+              </figcaption>
+            </figure>
+            <ResearchTabs stages={researchStages} />
+          </div>
+
+          <div className="research-block">
+            <h3 className="subsection-title">Applications</h3>
+            <ul className="application-grid">
+              {applications.map(([domain, focus]) => (
+                <li key={domain}>
+                  <strong>{domain}</strong>
+                  <span>{focus}</span>
+                </li>
+              ))}
             </ul>
           </div>
 
-          <div className="recent-interest-block">
-            <h3 className="subsection-title">Recent research interests</h3>
-            <p className="recent-interest-intro">
-              Extending data-driven modeling, uncertainty quantification, and
-              design optimization to two emerging research domains.
+          <div className="research-statement goal-statement">
+            <h3 className="subsection-title">Ultimate goal</h3>
+            <p>
+              Developing data-driven, end-to-end solutions that combine existing
+              knowledge with limited data for uncertainty quantification and
+              design optimization—making advanced methods accessible to
+              engineers across industries.
             </p>
-            <div className="recent-interest-grid">
-              {recentResearchAreas.map((area, index) => (
-                <article key={area}>
-                  <span>{String(index + 1).padStart(2, '0')}</span>
-                  <h4>{area}</h4>
-                </article>
-              ))}
-            </div>
+            <figure className="research-figure goal-figure">
+              <a
+                href="/ultimate-goal.png?v=20261124f"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Open the ultimate goal figure at full size"
+                title="Open full-size figure"
+              >
+                <img
+                  src="/ultimate-goal.png?v=20261124f"
+                  alt="End-to-end framework from engineer to engineer: a foundation model turns existing, unstructured knowledge into numerical priors and equations, the framework combines them with our own limited data and propagates uncertainty, decisions are made with the utility of each action and returned as a report, and each decision feeds new data back into the loop"
+                  width="2680"
+                  height="824"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </a>
+            </figure>
           </div>
+
         </section>
 
         <section className="section section-tint" id="publications">
@@ -605,8 +689,11 @@ export default function Home() {
                   <span>{manuscriptsInPreparation.length}</span>
                 </div>
                 <ol className="manuscript-list preparation-list">
-                  {manuscriptsInPreparation.map((title) => (
-                    <li key={title}><h4>{title}</h4></li>
+                  {manuscriptsInPreparation.map((title, index) => (
+                    <li key={title}>
+                      <span className="publication-number">{String(index + 1).padStart(2, '0')}</span>
+                      <h4>{title}</h4>
+                    </li>
                   ))}
                 </ol>
               </section>
@@ -620,31 +707,10 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="section" id="researchers">
+        <section className="section" id="more">
           <div className="shell">
             <div className="section-heading">
               <span>04</span>
-              <div><p>People</p><h2>Researchers</h2></div>
-            </div>
-
-            <div className="researcher-list-block">
-              <h3>Undergraduate Researchers</h3>
-              <ul className="researcher-list">
-                {undergraduateResearchers.map((researcher) => (
-                  <li key={researcher.name}>
-                    <strong>{researcher.name}</strong>
-                    <span>{researcher.year}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        <section className="section section-tint" id="more">
-          <div className="shell">
-            <div className="section-heading">
-              <span>05</span>
               <div><p>Profile</p><h2>Teaching, conference presentations, and patents</h2></div>
             </div>
 
