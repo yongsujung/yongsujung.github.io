@@ -417,7 +417,7 @@ function PublicationList({ items, descending = false }: { items: Publication[]; 
           <li key={`${publication.year}-${publication.title}`}>
             <span
               className={`publication-number${isLeadAuthor ? ' lead-author' : ''}`}
-              title={isLeadAuthor ? 'Lead / Corresponding Author publication' : undefined}
+              title={isLeadAuthor ? 'Lead / corresponding author publication' : undefined}
             >
               {publicationNumber}
             </span>
@@ -512,7 +512,7 @@ export default function Home() {
             </p>
             <div className="hero-links">
               <a href="mailto:ys.jung@hongik.ac.kr">ys.jung@hongik.ac.kr</a>
-              <a href="https://scholar.google.co.kr/citations?user=_ISI9JcAAAAJ&hl=ko">Google Scholar</a>
+              <a href="https://scholar.google.com/citations?user=_ISI9JcAAAAJ">Google Scholar</a>
             </div>
           </div>
           <div className="fact-row" aria-label="Profile summary">
@@ -669,14 +669,14 @@ export default function Home() {
           <div className="shell">
             <div className="section-heading">
               <span>03</span>
-              <div><p>Publications</p><h2>International Journal Publications</h2></div>
+              <div><p>Publications</p><h2>International journal publications</h2></div>
             </div>
-            <p className="publication-legend">Lead / Corresponding Author</p>
+            <p className="publication-legend">Lead / corresponding author</p>
             <PublicationList items={journalPublications} descending />
             <div className="manuscript-groups">
               <section className="manuscript-group" aria-labelledby="under-review-heading">
                 <div className="manuscript-group-heading">
-                  <h3 id="under-review-heading">Under Review / Revision</h3>
+                  <h3 id="under-review-heading">Under review / revision</h3>
                   <span>{manuscriptsUnderReview.length}</span>
                 </div>
                 <PublicationList items={manuscriptsUnderReview} />
@@ -684,7 +684,7 @@ export default function Home() {
 
               <section className="manuscript-group" aria-labelledby="in-preparation-heading">
                 <div className="manuscript-group-heading">
-                  <h3 id="in-preparation-heading">In Preparation</h3>
+                  <h3 id="in-preparation-heading">In preparation</h3>
                   <span>{manuscriptsInPreparation.length}</span>
                 </div>
                 <ol className="manuscript-list preparation-list">
@@ -710,7 +710,7 @@ export default function Home() {
           <div className="shell">
             <div className="section-heading">
               <span>04</span>
-              <div><p>Profile</p><h2>Teaching, conference presentations, and patents</h2></div>
+              <div><p>Profile</p><h2>Conference presentations, patents, and teaching</h2></div>
             </div>
 
             <div className="stacked-blocks">
