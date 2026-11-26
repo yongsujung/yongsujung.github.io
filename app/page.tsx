@@ -17,7 +17,7 @@ const researchStages: ResearchStage[] = [
       ['Hierarchical Bayesian estimation', 'Input distributions from a few tests'],
       ['Kernel density estimation', 'No assumed distribution family'],
       ['Deep Gaussian processes', 'Non-stationary random processes'],
-      ['Normalizing flows · diffusion models', 'Complex, high-dimensional distributions'],
+      ['Normalizing flows · Diffusion models', 'Complex, high-dimensional distributions'],
     ],
     keyWork: 'SMO 2019, 2020 · PEM 2024 · RESS 2026',
   },
@@ -29,7 +29,7 @@ const researchStages: ResearchStage[] = [
     question: 'How uncertain is the prediction, and why?',
     methods: [
       ['Multi-fidelity GP', 'Expensive analyses from cheap ones'],
-      ['Multi-output · latent-variable GP', 'Correlated outputs and similar materials in one model'],
+      ['Multi-output · Latent-variable GP', 'Correlated outputs and similar materials in one model'],
       ['Heteroscedastic GP', 'Variation that changes with the condition'],
       ['Bayesian model calibration', 'Simulation parameters and model error from tests'],
     ],
@@ -45,7 +45,7 @@ const researchStages: ResearchStage[] = [
       ['Reliability analysis', 'Probability of failure'],
       ['RBDO', 'Lowest cost at a target reliability'],
       ['CBDO', 'Target reliability with a target confidence'],
-      ['System · time-variant reliability', 'Several failure modes; loads over time'],
+      ['System · Time-variant reliability', 'Several failure modes; loads over time'],
     ],
     keyWork: 'JMD 2021 · RESS 2026 · Structural Safety 2026',
   },
@@ -602,14 +602,14 @@ export default function Home() {
             <h3 className="subsection-title">Research overview</h3>
             <figure className="research-figure wide-figure">
               <a
-                href="/research-overview.png?v=20261124d"
+                href="/research-overview.png?v=20261124e"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Open the research overview figure at full size"
                 title="Open full-size research overview"
               >
                 <img
-                  src="/research-overview.png?v=20261124d"
+                  src="/research-overview.png?v=20261124e"
                   alt="Research overview in four modules: input distributions from few tests, data-driven AI modeling with multi-fidelity, multi-output, heteroscedastic, and latent-variable Gaussian processes and pretrained foundation models, reliability- and confidence-based optimization, and sequential experimental design with Bayesian optimization and active learning, with new data fed back to the input"
                   width="2644"
                   height="1040"
@@ -646,14 +646,14 @@ export default function Home() {
             </p>
             <figure className="research-figure goal-figure">
               <a
-                href="/ultimate-goal.png?v=20261124f"
+                href="/ultimate-goal.png?v=20261124g"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Open the ultimate goal figure at full size"
                 title="Open full-size figure"
               >
                 <img
-                  src="/ultimate-goal.png?v=20261124f"
+                  src="/ultimate-goal.png?v=20261124g"
                   alt="End-to-end framework from engineer to engineer: a foundation model turns existing, unstructured knowledge into numerical priors and equations, the framework combines them with our own limited data and propagates uncertainty, decisions are made with the utility of each action and returned as a report, and each decision feeds new data back into the loop"
                   width="2680"
                   height="824"
