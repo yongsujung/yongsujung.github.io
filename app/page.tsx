@@ -495,7 +495,7 @@ export default function Home() {
             <div>
               <h1>Yongsu Jung</h1>
               <p className="hero-title">Assistant Professor</p>
-              <p className="hero-affiliation">Department of Mechanical and Design Engineering<br />Hongik University, Sejong</p>
+              <p className="hero-affiliation">Department of Mechanical and Design Engineering<br />Hongik University, Sejong&nbsp;Campus, Republic&nbsp;of&nbsp;Korea</p>
             </div>
           </div>
           <div className="hero-introduction">
@@ -519,7 +519,6 @@ export default function Home() {
             <div><strong>{journalPublications.length}</strong><span>Journal publications</span></div>
             <div><strong>{manuscriptsUnderReview.length} / {manuscriptsInPreparation.length}</strong><span>Under review / In preparation</span></div>
             <div><strong>{conferences.length} / {patents.length}</strong><span>Conferences / Patents</span></div>
-            <div><strong>Sejong</strong><span>Republic of Korea</span></div>
           </div>
         </section>
 
@@ -527,9 +526,9 @@ export default function Home() {
           <div className="shell">
             <div className="section-heading">
               <span>01</span>
-              <div><p>Academic profile</p><h2>Academic background</h2></div>
+              <div><p>Background</p><h2>Education and experience</h2></div>
             </div>
-            <div className="timeline background-timeline" aria-label="Experience and education">
+            <div className="timeline background-timeline" aria-label="Education and experience">
               <article>
                 <div className="timeline-year">2025–Present</div>
                 <h3>Assistant Professor</h3>
@@ -752,7 +751,11 @@ export default function Home() {
 
       <footer>
         <div className="shell footer-inner">
-          <div><strong>Yongsu Jung</strong><span>Mechanical and Design Engineering</span></div>
+          <div>
+            <strong>Yongsu Jung</strong>
+            <span>Department of Mechanical and Design Engineering, Hongik University</span>
+            <address>2639 Sejong-ro, Jochiwon-eup, Sejong&nbsp;30016, Republic&nbsp;of&nbsp;Korea</address>
+          </div>
           <a href="mailto:ys.jung@hongik.ac.kr">ys.jung@hongik.ac.kr</a>
         </div>
       </footer>
