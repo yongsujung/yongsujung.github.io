@@ -66,15 +66,15 @@ const researchStages: ResearchStage[] = [
 ];
 
 const applications = [
-  ['Plasma etching', 'Robust etch recipes'],
-  ['Multilayer film stacks', 'Stack etching from single-film data'],
-  ['Photolithography', 'Pattern-error prediction'],
-  ['Battery electrodes', 'Particle-size distribution design'],
+  ['Plasma etching', 'Robust recipes and multilayer etch prediction'],
+  ['Photolithography', 'Mask correction and pattern-error prediction'],
+  ['Lithium-ion batteries', 'Electrode design and voltage prediction'],
   ['Heat exchanger', 'Thermoelectric generator design'],
   ['Wind power', 'Wind-farm power reliability'],
   ['UAV flight', 'Joint models of repeated flight tests'],
   ['Maintenance records', 'LLM-based repair prediction'],
   ['Material calibration', 'Plasticity from tensile tests'],
+  ['Generative design', 'Wheel designs via topology optimization'],
   ['Kirigami strain sensor', 'Purpose-specific geometry'],
   ['Sensor placement', 'Full field from a few sensors'],
   ['Strain fields', 'Full-field strain from gauges and DIC'],
